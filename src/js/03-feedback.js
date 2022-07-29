@@ -19,13 +19,11 @@ function saveInput(evt) {
 function submitInput(evt) {
     evt.preventDefault();
     console.log(savedMassege)
-
     evt.currentTarget.reset()
     localStorage.removeItem(LOCALSTORAGE_KEY)
 }
 
 function populateInput() {
-    // const savedMassege = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     if (savedMassege) {
         form.elements.email.value = savedMassege.email;
         form.elements.message.value = savedMassege.message
